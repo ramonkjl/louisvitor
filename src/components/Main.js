@@ -17,10 +17,11 @@ const MainContainer = styled.main`
   margin-bottom: 0;
   grid-area: um;
   text-align: right;
-  padding-right: 5px;
+  padding-right: 0.313rem;
+  width: 100%;
   }
   #um p{
-    margin-top: 50px;
+    margin-top: 3.125rem;
   }
 
 
@@ -29,6 +30,7 @@ const MainContainer = styled.main`
     //background: blue;
     height: 382px;
     grid-area: dois;
+    width: 100%;
   }
   #dois img{width: 100%; height: 100%;}
 
@@ -36,11 +38,12 @@ const MainContainer = styled.main`
     //background: green;
     height: 382px;
     grid-area: tres;
+    width: 100%;
   }
   
   #tres p{
     margin-left: 5px;
-    margin-top: 145px;
+    margin-top: 9.063rem;
   }
   #tres ul{
     margin-top: -10px;
@@ -49,7 +52,9 @@ const MainContainer = styled.main`
   #quatro{
     height: 149px;
     grid-area: quatro;
-    font-size: 18px;
+    font-size: 1.125rem;
+    word-wrap: break-word;
+    width: 100%;
   }
   #quatro div{
     width: 100%;
@@ -65,23 +70,27 @@ const MainContainer = styled.main`
     margin-top: -100px;
     position: absolute;
     color: white;
-    margin-left: 40px;
+    margin-left: 2.5rem;
     z-index: 5;
+    
   }
 
   #cinco{
     //background: green;
     height: 149px;
     grid-area: cinco;
+    width: 100%;
   }
   #seis{
     background-image: url("/bandeira-brasil.jpg");
     background-position: center;
     background-size: 100%;
+    background-repeat: no-repeat;
     height: 149px;
     grid-area: seis;
     text-align: center;
     font-size: 22px;
+    width: 100%;
   }
   #seis p{
 
@@ -89,51 +98,146 @@ const MainContainer = styled.main`
 
   #grande{
  // background: yellow;
-  height: 200px;
+  height: 100%;
   grid-area: g;
   text-align: start;
+  width: 100%;
   }
   #grande p{
     margin-left: 5px;
 
   }
+  /* 640================ */
+  @media screen and (max-width: 640px){
+    #tres{
+      text-align: center;
+      font-size: 14px;
+      height: 382px;
+      grid-area: tres;
+      word-wrap: break-word;
+      
+      margin-left: 3px;
+      margin-top: -30px;
+    }
+    #tres p{
+      margin-left: -10px;
+      margin-top: 9.063rem;
+    }
+    #tres ul{
+      list-style: none;
+      margin-top: -10px;
+      margin-left: -41px;
+    }
+
+    #quatro{
+      text-align: center;
+    height: 149px;
+    grid-area: quatro;
+    font-size: 1.125rem;
+    word-wrap: break-word;
+    width: 100%;
+  }
+  #quatro div{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image: url("/skype.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  #quatro #p{
+    font-size: 17px;
+    margin-top: -100px;
+    position: absolute;
+    color: white;
+    margin-left: 0px;
+    z-index: 5;
+  }
+
+  #seis{
+    
+    background-image: url("/bandeira-brasil.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 149px;
+    grid-area: seis;
+    text-align: center;
+    font-size: 22px;
+    width: 100%;
+  }
+  #seis p{
+    font-size: 17px;
+
+  } 
+
+  }
+
+  @media screen and (max-width: 375px){
+      overflow: auto;
+
+    #quatro #p{
+      font-size: 17px;
+      margin-top: -100px;
+      position: relative;
+      color: white;
+      margin-left: 0px;
+      z-index: 5;
+  }
+  }
+
+  @media screen and (max-width: 414px){
+    #quatro #p{
+      font-size: 17px;
+      margin-top: -100px;
+      position: relative;
+      color: white;
+      margin-left: 0px;
+      z-index: 5;
+    }
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.5);
+  }
+
 `;
 
 function Main() {
-    return (
-        <MainContainer>
-            <div id="um"> <p>ELABORAÇÃO DE IMAGENS ILUSTRATIVAS PARA SEU EMPREENDEMENTO:<br/> BUSCAMOS EVIDENCIAR A SENSAÇÃO QUE DESEJA <br/>PASSAR ATRAVÉS DAS IMAGENS!</p> </div>
-            <div id="dois"> <img src="/imag1.png" /> </div>
-            <div id="tres">
-                <p>TRABALHAMOS COM:</p>
-                <ul>
-                    <li>IMAGENS INTERNAS</li>
-                    <li>IMAGENS EXTERNAS</li>
-                    <li>PLANTAS HUMANIZADAS</li>
-                    <li>ANIMAÇÕES</li>
-                    <li>IMAGENS 180º/360º</li>
-                </ul>
-            </div>
-            <div id="quatro"><div></div><p id="p" > REUNIÕES VIA SKYPE<br/> COM O CLIENTE! </p> </div>
-            <div id="cinco"> <img src="/imag3.png" /> </div>
-            <div id="seis"> <p> ATENDEMOS EM<br/> TODO O BRASIL<br/> VIA ONLINE </p> </div>
+  return (
+    <MainContainer>
+      <div id="um"> <p>ELABORAÇÃO DE IMAGENS ILUSTRATIVAS PARA SEU EMPREENDEMENTO:<br /> BUSCAMOS EVIDENCIAR A SENSAÇÃO QUE DESEJA <br />PASSAR ATRAVÉS DAS IMAGENS!</p> </div>
+      <div id="dois"> <img src="/imag1.png" /> </div>
+      <div id="tres">
+        <p>TRABALHAMOS COM:</p>
+        <ul>
+          <li>IMAGENS INTERNAS</li>
+          <li>IMAGENS EXTERNAS</li>
+          <li>PLANTAS HUMANIZADAS</li>
+          <li>ANIMAÇÕES</li>
+          <li>IMAGENS 180º/360º</li>
+        </ul>
+      </div>
+      <div id="quatro"><div></div><p id="p" > REUNIÕES VIA SKYPE<br /> COM O CLIENTE! </p> </div>
+      <div id="cinco"> <img src="/imag3.png" /> </div>
+      <div id="seis"> <p> ATENDEMOS EM<br /> TODO O BRASIL<br /> VIA ONLINE </p> </div>
 
-            <div id="grande">
-                <p>
-                    OBSERVAÇÕES:<br />
+      <div id="grande">
+        <p>
+          OBSERVAÇÕES:<br />
             - O PAGAMENTO DEVE SER 50% ANTES, PARA DAR INÍCIO E 50% APÓS ENTREGUES AS IMAGENS POR E-MAIL.<br />
             -SERÁ EMITIDO UM PEQUENO CONTRATO ONLINE PARA A SEGURANÇA DE AMBAS AS PARTES.<br />
             -AINDA SOBRE O PAGAMENTO, ELE PODE SER FEITO POR DEPÓSITO EM CAIXA E BANCO DO BRAIL.<br />
             - ANTES DE ENVIAR AS IMAGENS FINAIS, É ENVIADO UM PRÉVIO ESBOÇO PARA O CHECKLIST DO CLIENTE.<br />
-                </p>
+        </p>
 
-                <p>
-                    É UM PRAZER TELO COMO CLIENTE!
+        <p>
+          É UM PRAZER TELO COMO CLIENTE!
           </p>
 
-            </div>
-        </MainContainer>
-    )
+      </div>
+    </MainContainer>
+  )
 }
 
 export default Main;
