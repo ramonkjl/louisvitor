@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const HeaderContainer = styled.header`
 text-align: center;
+color: white;
 
 img{
     align-self: center;
@@ -25,14 +27,17 @@ nav ul li{
 `;
 
 export default function Header() {
+
+    const router = useRouter();
+
     return (
         <HeaderContainer>
-            <img src="logo.png" />
-            <nav /* style={{float: "right", width: "100%", padding: "0px", margin: "0px" }} */>
+            <img src="logo.png" onClick={ () => router.push('/') } />
+            <nav>
                 <ul>
-                    <li>Portfólio</li>
-                    <li>Serviços</li>
-                    <li>Contato</li>
+                    <li><a onClick={ () => router.push('/portfolio') }> Portfólio </a> </li>
+                    <li onClick={ () => router.push('/') } >Serviços</li>
+                    <li onClick={ () => router.push('/contato') } >Contato</li>
                 </ul>
             </nav>
         </HeaderContainer>

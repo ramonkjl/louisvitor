@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const FooterContainer = styled.footer`
     text-align: center;
     padding: 4rem 0 2rem;
-    background-color: cyan;
+    background-color: #2A2827;
     opacity: 1;
     width: 100vw;
 

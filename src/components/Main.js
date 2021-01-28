@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const MainContainer = styled.main`
+  color: white;
   margin-bottom: 2rem;
   margin-top: 2rem;
   display: grid;
@@ -8,61 +9,104 @@ const MainContainer = styled.main`
   grid-gap: 0px;
   /* grid-template-rows: 20vh 70vh 10vh; */
   grid-template-areas: "um dois tres" "quatro cinco seis" "g g g";
+  box-shadow: 0px 0px 9px 9px rgba(255, 255, 255, 0.5);
 
   #um{
-  background: yellow;
+  //background: yellow;
   height: 382px;
   margin-bottom: 0;
   grid-area: um;
   text-align: right;
+  padding-right: 5px;
   }
+  #um p{
+    margin-top: 50px;
+  }
+
+
   #dois{
     margin-top: 0px;
-    background: blue;
+    //background: blue;
     height: 382px;
     grid-area: dois;
   }
   #dois img{width: 100%; height: 100%;}
 
   #tres{
-    background: green;
+    //background: green;
     height: 382px;
     grid-area: tres;
   }
+  
+  #tres p{
+    margin-left: 5px;
+    margin-top: 145px;
+  }
+  #tres ul{
+    margin-top: -10px;
+  }
 
   #quatro{
-    background: red;
     height: 149px;
     grid-area: quatro;
+    font-size: 18px;
+  }
+  #quatro div{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image: url("/skype.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  #quatro #p{
+    margin-top: -100px;
+    position: absolute;
+    color: white;
+    margin-left: 40px;
+    z-index: 5;
   }
 
   #cinco{
-    background: green;
+    //background: green;
     height: 149px;
     grid-area: cinco;
   }
   #seis{
-    background: red;
+    background-image: url("/bandeira-brasil.jpg");
+    background-position: center;
+    background-size: 100%;
     height: 149px;
     grid-area: seis;
+    text-align: center;
+    font-size: 22px;
+  }
+  #seis p{
+
   }
 
   #grande{
-  background: yellow;
+ // background: yellow;
   height: 200px;
   grid-area: g;
   text-align: start;
+  }
+  #grande p{
+    margin-left: 5px;
+
   }
 `;
 
 function Main() {
     return (
         <MainContainer>
-            <div id="um"> <p>ELABORAÇÃO DE IMAGENS ILUSTRATIVAS PARA SEU EMPREENDEMENTO: BUSCAMOS EVIDENCIAR A SENSAÇÃO QUE DESEJA PASSAR ATRAVÉS DAS IMAGENS!</p> </div>
+            <div id="um"> <p>ELABORAÇÃO DE IMAGENS ILUSTRATIVAS PARA SEU EMPREENDEMENTO:<br/> BUSCAMOS EVIDENCIAR A SENSAÇÃO QUE DESEJA <br/>PASSAR ATRAVÉS DAS IMAGENS!</p> </div>
             <div id="dois"> <img src="/imag1.png" /> </div>
             <div id="tres">
+                <p>TRABALHAMOS COM:</p>
                 <ul>
-                    <p>TRABALHAMOS COM:</p>
                     <li>IMAGENS INTERNAS</li>
                     <li>IMAGENS EXTERNAS</li>
                     <li>PLANTAS HUMANIZADAS</li>
@@ -70,9 +114,9 @@ function Main() {
                     <li>IMAGENS 180º/360º</li>
                 </ul>
             </div>
-            <div id="quatro"> <p> REUNIÕES VIA SKYPE COM O CLIENTE! </p> </div>
+            <div id="quatro"><div></div><p id="p" > REUNIÕES VIA SKYPE<br/> COM O CLIENTE! </p> </div>
             <div id="cinco"> <img src="/imag3.png" /> </div>
-            <div id="seis"> <p> ATENDEMOS EM TODO O BRASIL VIA ONLINE </p> </div>
+            <div id="seis"> <p> ATENDEMOS EM<br/> TODO O BRASIL<br/> VIA ONLINE </p> </div>
 
             <div id="grande">
                 <p>
