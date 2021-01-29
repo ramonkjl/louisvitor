@@ -36,7 +36,7 @@ export default function Header() {
             <img src="logo.png" onClick={ () => router.push('/') } />
             <nav>
                 <ul>
-                    <li><a onClick={ () => router.push('/portfolio') }> Portfólio </a> </li>
+                    <li onClick={ () => router.push('/portfolio') } > Portfólio </li>
                     <li onClick={ () => router.push('/') } >Serviços</li>
                     <li onClick={ () => router.push('/contato') } >Contato</li>
                 </ul>

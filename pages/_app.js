@@ -18,6 +18,16 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     //margin: 0 7%;
   }
+  #divContainer{
+    width: min(90vw, 800px);
+    margin: auto;
+  }
+
+/*   @media screen and (max-width: 320px){
+    #divContainer{
+      width: 100vw !important;
+    }
+  } */
 `
 
 const theme = {

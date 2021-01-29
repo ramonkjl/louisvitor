@@ -109,6 +109,7 @@ const MainContainer = styled.main`
   }
 
   @media screen and (max-width: 320px){
+    width: 37.5rem;
     #um{
   //background: yellow;
   height: 382px;
@@ -116,7 +117,7 @@ const MainContainer = styled.main`
   grid-area: um;
   text-align: right;
   padding-right: 0.313rem;
-  width: 100%;
+  //width: 100%;
   }
   #um p{
     margin-top: 3.125rem;
@@ -126,13 +127,25 @@ const MainContainer = styled.main`
   #dois{
     margin-top: 0px;
     //background: blue;
-    width: 25px;
-    height: 50px;
+    width: 300px;
+    height: 377px;
     grid-area: dois;
     //width: 100%;
   }
   #dois img{width: 100%; height: 100%;}
 
+  }
+
+  #seis{
+    background-image: url("/bandeira-brasil.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 149px;
+    grid-area: seis;
+    text-align: center;
+    font-size: 22px;
+    width: 100%;
   }
 
 `;
