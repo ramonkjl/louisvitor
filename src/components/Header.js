@@ -25,7 +25,6 @@ nav ul li{
     cursor: pointer;
 }
 
-}
 `;
 
 export default function Header() {

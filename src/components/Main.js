@@ -108,6 +108,33 @@ const MainContainer = styled.main`
 
   }
 
+  @media screen and (max-width: 320px){
+    #um{
+  //background: yellow;
+  height: 382px;
+  margin-bottom: 0;
+  grid-area: um;
+  text-align: right;
+  padding-right: 0.313rem;
+  width: 100%;
+  }
+  #um p{
+    margin-top: 3.125rem;
+  }
+
+
+  #dois{
+    margin-top: 0px;
+    //background: blue;
+    width: 25px;
+    height: 50px;
+    grid-area: dois;
+    //width: 100%;
+  }
+  #dois img{width: 100%; height: 100%;}
+
+  }
+
 `;
 
 function Main() {
