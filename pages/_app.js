@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     overflow-x: hidden;
     background-color: #000;
+    color: #fff;
   }
 
   .image-gallery{
@@ -23,11 +24,30 @@ const GlobalStyle = createGlobalStyle`
     margin: auto;
   }
 
-/*   @media screen and (max-width: 320px){
-    #divContainer{
-      width: 100vw !important;
-    }
-  } */
+  #logoTipo{
+    width: 100px;
+  }
+
+  .jumbotron {
+    text-align: center;
+    background-color: blue;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    bottom: 0;
+  }
+
+  .copyright{
+    margin-top: -30px;
+  }
+
+  div.social{
+  margin-top: -0px;
+  }
+  div.social a{
+    padding-right: 7px;
+  }
+
 `
 
 const theme = {

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Footer from '../src/components/Footer';
 import Main from '../src/components/Main'
 import Head from 'next/head';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -19,9 +20,10 @@ export default function Home() {
       <div id="divContainer">
         <Header />
         <Main />
-
+        
       </div>
       <Footer />
+      
 
     </>
   )

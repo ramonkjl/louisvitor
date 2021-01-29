@@ -1,46 +1,82 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText
+  } from 'reactstrap';
 
-const HeaderContainer = styled.header`
-text-align: center;
-color: white;
-
-img{
-    align-self: center;
-    justify-self: center;
-    width: 25rem;
-    margin-bottom: 1rem;
+const Divona = styled.div`
+//margin-top: 5px;
+.navbar-brand, .nav-link{
     cursor: pointer;
 }
-
-nav ul{
-    float: right;
-    padding-inline-start: 0px;
-    margin: 0;
-}
-
-nav ul li{
-    padding-right: 1rem;
-    display: inline;
-    cursor: pointer;
-}
-
 `;
 
-export default function Header() {
+const Example = (props) => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggle = () => setIsOpen(!isOpen);
 
     const router = useRouter();
-
+  
     return (
-        <HeaderContainer>
-            <img src="logo.png" onClick={ () => router.push('/') } />
-            <nav>
-                <ul>
-                    <li onClick={ () => router.push('/portfolio') } > Portfólio </li>
-                    <li onClick={ () => router.push('/') } >Serviços</li>
-                    <li onClick={ () => router.push('/contato') } >Contato</li>
-                </ul>
-            </nav>
-        </HeaderContainer>
-    )
-}
+      <Divona>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand onClick= { ()=> router.push('/') }> <img id="logoTipo" src="/logo.png"/> </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+             <Nav className="mr-auto navDireita" navbar>
+              <NavItem>
+                {/* <NavLink  > Portfólio </NavLink> */}
+              </NavItem>
+              <NavItem>
+                {/* <NavLink > Contato </NavLink> */}
+              </NavItem>
+              {/* <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Option 1
+                  </DropdownItem>
+                  <DropdownItem>
+                    Option 2
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown> */}
+            </Nav>
+            
+            <NavbarText>
+                <Nav className="mr-auto navDireita" navbar>
+                <NavItem>
+                    <NavLink onClick={ ()=> router.push("/portfolio") } >Portfólio</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink onClick={ ()=> router.push('/contato') } >Contato</NavLink>
+                </NavItem>
+                </Nav>
+            </NavbarText>
+          
+          </Collapse>
+        </Navbar>
+      </Divona>
+    );
+  }
+  
+  export default Example;
