@@ -17,7 +17,7 @@ const MainContainer = styled.main`
   margin-bottom: 0;
   grid-area: um;
   text-align: right;
-  padding-right: 0.313rem;
+  //padding-right: 0.313rem;
   width: 100%;
   }
   #um p{
@@ -35,10 +35,12 @@ const MainContainer = styled.main`
   #dois img{width: 100%; height: 100%;}
 
   #tres{
+    text-align:center;
     //background: green;
     height: 382px;
     grid-area: tres;
     width: 100%;
+    margin-left: -12px;
   }
   
   #tres p{
@@ -47,6 +49,7 @@ const MainContainer = styled.main`
   }
   #tres ul{
     margin-top: -10px;
+    margin-left: -5px;
   }
 
   #quatro{
@@ -109,20 +112,19 @@ const MainContainer = styled.main`
   }
 
   @media screen and (max-width: 320px){
-    width: 37.5rem;
+    width: 36rem;
     #um{
   //background: yellow;
   height: 382px;
-  margin-bottom: 0;
+  //margin-bottom: 0;
   grid-area: um;
   text-align: right;
-  padding-right: 0.313rem;
+  //padding-right: 0.313rem;
   //width: 100%;
   }
   #um p{
     margin-top: 3.125rem;
   }
-
 
   #dois{
     margin-top: 0px;
@@ -134,6 +136,23 @@ const MainContainer = styled.main`
   }
   #dois img{width: 100%; height: 100%;}
 
+  }
+
+  #tres{
+    //background: green;
+    height: 382px;
+    grid-area: tres;
+    width: 100%;
+  }
+  
+  #tres p{
+    margin-left: 5px;
+    margin-top: 9.063rem;
+  }
+  #tres ul{
+    margin-left: -25px;
+    margin-top: -10px;
+    list-style: none;
   }
 
   #seis{
