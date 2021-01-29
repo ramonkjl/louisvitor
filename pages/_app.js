@@ -18,17 +18,6 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     //margin: 0 7%;
   }
-
-  #divContainer{
-    @media screen and (max-width: 375px){
-      overflow: auto;
-      
-    }
-    @media screen and (max-width: 414px){
-      overflow: auto;
-      
-    }
-  }
 `
 
 const theme = {

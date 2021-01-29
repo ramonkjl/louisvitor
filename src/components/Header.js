@@ -25,16 +25,6 @@ nav ul li{
     cursor: pointer;
 }
 
-@media screen and (max-width: 375px){
-    img{
-    align-self: center;
-    justify-self: center;
-    width: 25rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    //visibility: hidden;
-}
-
 }
 `;
 
