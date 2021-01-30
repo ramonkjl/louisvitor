@@ -13,11 +13,6 @@ const GlobalStyle = createGlobalStyle`
     color: #fff;
   }
 
-  .essaAqui{
-    padding: 0;
-
-  }
-
   .image-gallery{
     margin-top: 50px;
     //float: left;

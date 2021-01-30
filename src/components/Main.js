@@ -2,6 +2,14 @@ import styled from 'styled-components';
 
 const MainContainer = styled.div`
 margin-top: 12px;
+
+p{
+  font-size: 0.8rem;
+}
+ul{
+  font-size: 0.8rem;
+
+}
 `;
 
 import React from 'react';
@@ -21,7 +29,12 @@ const Example = (props) => {
           </Col>
 
           <Col>
-            <img src="/imag1.png" />
+
+            <figure className="figure">
+              <img src="/imag1.png" className="figure-img" alt="..." />
+            </figure>
+
+           {/*  <img src="/imag1.png" className="figure-img " /> */}
           </Col>
 
           <Col>
@@ -41,7 +54,12 @@ const Example = (props) => {
             <p id="p" > REUNIÕES VIA SKYPE<br /> COM O CLIENTE! </p>
           </Col>
           <Col /* xs="auto" */>
-            <img src="/imag3.png" />
+
+          <figure className="figure">
+              <img src="/imag3.png" className="figure-img" alt="..." />
+            </figure>
+
+            {/* <img src="/imag3.png" /> */}
           </Col>
           <Col /* xs="3" */>
             <p> ATENDEMOS EM<br /> TODO O BRASIL<br /> VIA ONLINE </p>

@@ -21,6 +21,11 @@ const Divona = styled.div`
 .navbar-brand, .nav-link{
     cursor: pointer;
 }
+
+.essaAqui{
+    padding: 0;
+
+  }
 `;
 
 const Example = (props) => {
