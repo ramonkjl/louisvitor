@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const MainContainer = styled.div`
 margin-top: 12px;
 
+.figure{
+  width: 100%;
+}
+
 p{
   font-size: 0.8rem;
 }
