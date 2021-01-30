@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .image-gallery{
-    margin-top: 20px;
+    margin-top: 50px;
     //float: left;
     width: 100%;
     //margin: 0 7%;

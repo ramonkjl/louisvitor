@@ -34,20 +34,3 @@ const Example = (props) => {
 };
 
 export default Example;
-
-
-
-/* function Footer() {
-    return (
-        <FooterContainer>
-            <div class="copyright"><small>&copy; 2021 - Ramon Nunes</small></div>
-            <div class="social">
-                <a href="https://www.facebook.com/ramon.barbado/" target="_blank"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/24/Facebook-icon.png" /></a>
-                <a href="https://www.instagram.com/ramon.nunest/" target="_blank"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/24/Instagram-icon.png" /></a>
-                <a href="https://www.linkedin.com/in/ramon-nunes-08b038157/" target="_blank"><img src="https://icons.iconarchive.com/icons/icons8/ios7/24/Logos-Linkedin-icon.png" /></a>
-            </div>
-        </FooterContainer>
-    )
-}
-
-export default Footer; */

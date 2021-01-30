@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
+import React, { useState } from 'react';
 import {
     Collapse,
     Navbar,
@@ -17,7 +18,6 @@ import {
   } from 'reactstrap';
 
 const Divona = styled.div`
-//margin-top: 5px;
 .navbar-brand, .nav-link{
     cursor: pointer;
 }
@@ -36,7 +36,7 @@ const Example = (props) => {
           <NavbarBrand onClick= { ()=> router.push('/') }> <img id="logoTipo" src="/logo.png"/> </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-             <Nav className="mr-auto navDireita" navbar>
+             <Nav className="mr-auto" navbar>
               <NavItem>
                 {/* <NavLink  > Portfólio </NavLink> */}
               </NavItem>
@@ -63,7 +63,7 @@ const Example = (props) => {
             </Nav>
             
             <NavbarText>
-                <Nav className="mr-auto navDireita" navbar>
+                <Nav className="mr-auto" navbar>
                 <NavItem>
                     <NavLink onClick={ ()=> router.push("/portfolio") } >Portfólio</NavLink>
                 </NavItem>
