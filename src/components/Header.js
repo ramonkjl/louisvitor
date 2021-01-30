@@ -1,21 +1,21 @@
 
 import styled from 'styled-components';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
-  } from 'reactstrap';
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
 
 const Divona = styled.div`
 .navbar-brand, .nav-link{
@@ -24,26 +24,27 @@ const Divona = styled.div`
 `;
 
 const Example = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggle = () => setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const router = useRouter();
-  
-    return (
-      <Divona>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand onClick= { ()=> router.push('/') }> <img id="logoTipo" src="/logo.png"/> </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-             <Nav className="mr-auto" navbar>
-              <NavItem>
-                {/* <NavLink  > Portfólio </NavLink> */}
-              </NavItem>
-              <NavItem>
-                {/* <NavLink > Contato </NavLink> */}
-              </NavItem>
-              {/* <UncontrolledDropdown nav inNavbar>
+  const toggle = () => setIsOpen(!isOpen);
+
+  const router = useRouter();
+
+  return (
+    <Divona>
+
+      <Navbar className="essaAqui" color="light" light expand="md">
+        <NavbarBrand onClick={() => router.push('/')}> <img id="logoTipo" src="/logo.png" /> </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              {/* <NavLink  > Portfólio </NavLink> */}
+            </NavItem>
+            <NavItem>
+              {/* <NavLink > Contato </NavLink> */}
+            </NavItem>
+            {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
@@ -60,23 +61,32 @@ const Example = (props) => {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown> */}
+          </Nav>
+
+          <NavbarText>
+            <Nav className="mr-auto" navbar>
+              <NavItem>
+                <NavLink onClick={() => router.push("/portfolio")} >Portfólio</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={() => router.push('/contato')} >Contato</NavLink>
+              </NavItem>
             </Nav>
-            
-            <NavbarText>
-                <Nav className="mr-auto" navbar>
-                <NavItem>
-                    <NavLink onClick={ ()=> router.push("/portfolio") } >Portfólio</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink onClick={ ()=> router.push('/contato') } >Contato</NavLink>
-                </NavItem>
-                </Nav>
-            </NavbarText>
-          
-          </Collapse>
-        </Navbar>
-      </Divona>
-    );
-  }
-  
-  export default Example;
+{/*             <nav className="navbar navbar-light bg-light">
+              <div className="container-fluid">
+                <form className="d-flex">
+                  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                  <button className="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </nav> */}
+          </NavbarText>
+
+        </Collapse>
+      </Navbar>
+
+    </Divona>
+  );
+}
+
+export default Example;
