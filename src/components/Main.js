@@ -33,12 +33,7 @@ const Example = (props) => {
           </Col>
 
           <Col>
-
-            <figure className="figure">
-              <img src="/imag1.png" className="figure-img" alt="..." />
-            </figure>
-
-           {/*  <img src="/imag1.png" className="figure-img " /> */}
+            <img src="/imag1.png" className="img-fluid" />
           </Col>
 
           <Col>
@@ -58,12 +53,7 @@ const Example = (props) => {
             <p id="p" > REUNIÕES VIA SKYPE<br /> COM O CLIENTE! </p>
           </Col>
           <Col /* xs="auto" */>
-
-          <figure className="figure">
-              <img src="/imag3.png" className="figure-img" alt="..." />
-            </figure>
-
-            {/* <img src="/imag3.png" /> */}
+            <img src="/imag3.png" className="img-fluid" />
           </Col>
           <Col /* xs="3" */>
             <p> ATENDEMOS EM<br /> TODO O BRASIL<br /> VIA ONLINE </p>
